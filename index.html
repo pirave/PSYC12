@@ -2,10 +2,12 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
 <body>
-<h1>Lecture 6</h1>
 
+<h1><a class="head" id="l6">Lecture 6</a></h1>
+<div id="l6-content">
 <h5>i-Clicker</h5>
 
 <pre><code>What type of stigma is being aged 73?
@@ -267,9 +269,10 @@ e) Gender identification is related to SC
 </code></pre>
 
 <hr />
+</div>
 
-<h1>Lecture 7</h1>
-
+<h1><a class="head" id="l7">Lecture 7</a></h1>
+<div id="l7-content">
 <h2>Movie Time!</h2>
 
 <pre><code>Testing of intelligence is complicated but its important
@@ -415,5 +418,13 @@ Are the tests unfair?
 
 <pre><code>Identity threat appraisals
 </code></pre>
+</div>
+<script>
+$("div").css("display","none");
+$(".head").click(function(){
+  $("#" +  $(this).attr('id') + "-content").slideToggle();
+});
+</script>
+
 </body>
 </html>
